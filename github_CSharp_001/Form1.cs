@@ -51,7 +51,25 @@ namespace github_CSharp_001
                     b = int.Parse(textBox2.Text);
                     textBox3.Text = Convert.ToString(a * b);
                 }
-                
+                else if (radioButton5.Checked)
+                {
+                    label1.Text = "Exp";
+                    double a, b;
+                    a = int.Parse(textBox1.Text);
+                    b = int.Parse(textBox2.Text);
+                    textBox3.Text = Convert.ToString(Math.Pow(a,b));
+                }
+
+
+
+                else if (radioButton6.Checked)
+                {
+                    label1.Text = "Raiz";
+                    double a, b;
+                    a = int.Parse(textBox1.Text);
+                    b = int.Parse(textBox2.Text);
+                    textBox3.Text = Convert.ToString(a * b);
+                }
             }
             catch (Exception ex) { MessageBox.Show("qualé irmão, só números e sem espaços"+ Environment.NewLine+" erro: " + ex); }
 
@@ -67,6 +85,7 @@ namespace github_CSharp_001
         private void radioButton1_CheckedChanged(object sender, EventArgs e)
         {
             label1.Text = "+";
+            
         }
 
         private void radioButton3_CheckedChanged(object sender, EventArgs e)
@@ -90,6 +109,21 @@ namespace github_CSharp_001
             textBox2.Clear();
             textBox3.Clear();
             
+        }
+
+        private void Form1_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void radioButton5_CheckedChanged(object sender, EventArgs e)
+        {
+            label1.Text = "Exp";
+        }
+
+        private void radioButton6_CheckedChanged(object sender, EventArgs e)
+        {
+            label1.Text = "Raiz";
         }
     }
 }
