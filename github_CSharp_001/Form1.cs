@@ -68,7 +68,7 @@ namespace github_CSharp_001
                     double a, b;
                     a = int.Parse(textBox1.Text);
                     b = int.Parse(textBox2.Text);
-                    textBox3.Text = Convert.ToString(a * b);
+                    textBox3.Text = Convert.ToString(Math.Pow(a, 1.0 / b));
                 }
             }
             catch (Exception ex) { MessageBox.Show("qualé irmão, só números e sem espaços"+ Environment.NewLine+" erro: " + ex); }
